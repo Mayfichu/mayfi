@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Design</title>
+	
+	<link rel="stylesheet" href="fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/style2s.css">
+	<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript">
+function Up(id_name){
+            let myName = document.getElementById(id_name);
+            myName.value = myName.value.toUpperCase();
+        }
+document.addEventListener('DOMContentLoaded', function(){
+	let form=document.querySelector('form');
+	let nameInput;
+	let emailInput;
+	let reviewInput;
+	let errorState;
+	
+	form.addEventListener('submit', function(e){
+		e.preventDefault();
+		nameInput=document.getElementById('inputname');
+		emailInput=document.getElementById('mailname');
+		reviewInput=document.getElementById('textarea');
+		errorState=false;
+		
+		if(nameInput.value === '' || reviewInput.value === '' || emailInput.value === ''){
+			errorState=true;
+		}
+		if(!isValidEmail(emailInput.value)){
+			errorState=true;
+		}
+		if(!errorState){
+			alert('Ваш отзыв отправлен');
+			form.reset();
+		} else{
+			alert("Заполните форму правильно");
+		}
+	});
+	function isValidEmail(email){
+		let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		return emailRegex.test(email);
+	}
+});
+</script>
+</head>
+<body>
+	
+	<header>
+		
+		<div class="navigation">
+			<div class="logo">Уютные Лапки</div>
+			<div class="menu">
+				<ul class="nav">
+					<li><a class="link" href="index.html">Главная</a></li>
+					<li><a class="link" href="index3.html">О нас</a></li>
+					<li><a class="link" href="index4.html">Акции</a></li>
+					<li><a class="link" href="index6.html">Каталог</a></li>
+					<li><a class="link" href="index2.html">Поддержка</a></li>
+				</ul>
+				<ul class="social-icons">
+      <li><a class="social-icon-vk" href="#" target="_blank" rel="noopener"></a></li>
+      <li><a class="social-icon-telegram" href="#" target="_blank" rel="noopener"></a></li>
+    </ul>
+					
+			</div>
+		</div>
+	</header>
+		
+
+<form id="reviewForm" class="formFaq">
+		<h1 class="form-main-heading">Опишите вашу проблему</h1>
+		<h2 class="form-name-heading">Имя</h2>
+		<input type="text" placeholder="Введите имя" id="inputname" name="inputname" onchange="Up('inputname')">
+		<h2 class="form-name-heading">Электронная почта</h2>
+		<input type="text" placeholder="email@gmail.com" id="mailname">
+		<h2 class="form-name-heading">Заголовок</h2>
+		<input type="text" placeholder="Заголовок" id="textname">
+		<h2 class="form-name-photo">Прикрепите фото по необходимости</h2>
+		<input type="file">
+		<h2 class="form-name-heading">Текст отзыва</h2>
+		<textarea class="form-report-area" rows="5" id="textarea"></textarea>
+		<input class="form-report-btn" type="submit" value="Отправить" id="form-report-id">
+	</form>
+<footer>
+    <p>©2024 Уютные Лапки | Все права защищены</p>
+	<p>Телефон: +7 (***) ***-**-**</p>
+	<p>Email: cozypaws@gmail.com</p>
+</footer>
+</body>
+</html>
