@@ -68,6 +68,9 @@ body {
 a{
 	text-decoration: none;
 }
+p {
+	text-indent: 25px;
+}
 /*Style for description*/
 .description {
     background: url(paws.jpg);
