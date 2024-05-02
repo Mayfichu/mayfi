@@ -571,12 +571,13 @@ body {
 	color: #c7c7c7;
 	font-size: 24px;
 }
-.title2{
+.title2 li a{
 	position: absolute;
 	margin-top: 160px;
 	margin-left: 150px;
 	color: #c7c7c7;
 	font-size: 18px;
+	text-decoration: none;
 }
 
 * {box-sizing: border-box;}
