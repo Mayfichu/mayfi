@@ -362,7 +362,7 @@ footer{
     justify-content: center;/*в центре по горизонтали*/
     align-items: center;/*в центре по вертикали*/
     flex-direction: column;
-    margin-top: 100px;/*отступ сверху*/
+    margin-top: 750px;/*отступ сверху*/
 }
 footer p {
     color: #fff;
