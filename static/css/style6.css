@@ -154,7 +154,8 @@ a{
 .emb{
 	margin: 0 auto;
 	margin-top: 150px;
-	position: absolute;
+	position: relative;
+	align-items: center;;
 }
 img {
 
