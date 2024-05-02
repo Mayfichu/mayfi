@@ -36,6 +36,7 @@ body {
 }
 .p{
 	text-indent: 25px;
+	text-align: justify;
 }
 .nav li a {
 	color: #FD7B7C;
@@ -96,6 +97,7 @@ p {
 	margin-left: 180px;
 	margin-right: 15px;
 	text-indent: 25px;
+	text-align: justify;
 }
 .prm{
 	display: flex
