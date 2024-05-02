@@ -34,10 +34,6 @@ body {
 	display: flex;
 	list-style: none;
 }
-.p{
-	text-indent: 25px;
-	text-align: justify;
-}
 .nav li a {
 	color: #FD7B7C;
 	text-decoration: none;
@@ -71,6 +67,7 @@ a{
 }
 p {
 	text-indent: 25px;
+	text-align: justify;
 }
 /*Style for description*/
 .description {
